@@ -31,6 +31,10 @@ module ActiveRecord::Import::OracleEnhancedAdapter
     %{NULL}
   end
 
+  def supports_on_duplicate_key_update?
+    false
+  end
+
   def max_allowed_packet
     1000
   end
